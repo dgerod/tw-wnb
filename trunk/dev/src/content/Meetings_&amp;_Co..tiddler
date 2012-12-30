@@ -1,0 +1,7 @@
+<div title="Meetings &amp; Co." modifier="dger" created="201007171140" modified="201212120942" tags="systemTiddler %tw-elnb">
+<pre><<forEachTiddler
+      where 'store.getValue(tiddler,"category") == "meeting"'
+      sortBy 'tiddler.created' descending
+      write " '* [[' +store.getTiddlerSubject(tiddler)+ '|' + tiddler.title + ']] - ' + store.getValue(tiddler,'date')+ '\n' ">>
+<<autoRefresh>></pre>
+</div>

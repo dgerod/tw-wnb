@@ -1,0 +1,6 @@
+<div title="Procedures" modifier="dger" created="201211280900" creator="dger">
+<pre><<forEachTiddler
+      where 'tiddler.tags.contains("@procedure")'  
+      sortBy 'tiddler.title'
+      write " '* [[' + store.getTiddlerSubject(tiddler) + '|' + tiddler.title + ']]\n' ">></pre>
+</div>

@@ -1,0 +1,24 @@
+<div title="Dashboard" modifier="escdie" created="201008301646" modified="201206210805" tags="systemTiddler %tw-elnb">
+<pre>Click to see a <<randomTiddler "systemConfig" "%tw-elnb">> tiddler or the [[cloud of tags|TagCloud]].
+!To-do
+<<tabs txtToDoPanel
+Now " " ToDoNow
+Next "" ToDoNext
+WaitingFor "" ToDoWaitingFor
+Future/Maybe " " ToDoFuture>>
+!!!Ongoing
+<<forEachTiddler
+      where 'store.getValue(tiddler,"category") == "task" && 
+      tiddler.tags.contains("#ongoing")'
+      sortBy 'tiddler.created' descending
+      write "'* [[' +store.getTiddlerSubject(tiddler)+ '|'+tiddler.title+']]\n'">>
+!!!Open Questions 
+<<forEachTiddler
+      where 'store.getValue(tiddler,"category") == "question" && 
+      tiddler.tags.contains("#open")'
+      sortBy 'tiddler.created' descending
+      write "'* [[' +store.getTiddlerSubject(tiddler)+ '|'+tiddler.title+']] ('+ tiddler.created.formatString('YYYY-0MM-0DD') + ')\n' ">>
+<<autoRefresh>>
+
+</pre>
+</div>

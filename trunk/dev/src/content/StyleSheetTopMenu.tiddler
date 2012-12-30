@@ -1,0 +1,34 @@
+<div title="StyleSheetTopMenu" modifier="dger" created="201009180850" modified="201009190904" tags="%tw-elnb styleTiddler">
+<pre>/***
+!StyleSheet for the TopMenu
+***/
+
+/*{{{*/
+
+#topMenu br {
+	display: none;
+}
+
+#topMenu {
+	background: [[ColorPalette::PrimaryMid]];
+	color:[[ColorPalette::PrimaryPale]];
+}
+
+#topMenu {
+	padding:2px;
+}
+
+#topMenu .button, #topMenu .tiddlyLink, #topMenu a {
+	margin-left: 0.5em;
+	margin-right: 0.5em;
+	padding-left: 3px;
+	padding-right: 3px;
+	color: [[ColorPalette::PrimaryPale]];
+	font-size: 115%;
+}
+#topMenu .button:hover, #topMenu .tiddlyLink:hover {
+	background: [[ColorPalette::PrimaryDark]];
+}
+
+/*}}}*/</pre>
+</div>

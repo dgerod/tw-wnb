@@ -1,0 +1,14 @@
+<div title="StyleSheetTagCloud" modifier="dger" created="201008280726" modified="201009190905" tags="%tw-elnb styleTiddler">
+<pre>/*{{{*/
+.tagCloud span {line-height: 3.5em; margin:3px;}
+.tagCloud1{font-size: 80%;}
+.tagCloud2{font-size: 100%;}
+.tagCloud3{font-size: 120%;}
+.tagCloud4{font-size: 140%;}
+.tagCloud5{font-size: 160%;}
+.tagCloud6{font-size: 180%;}
+.tagCloud7{font-size: 200%;}
+.tagCloud8{font-size: 220%;}
+.tagCloud9{font-size: 240%;}
+/*}}}*/</pre>
+</div>

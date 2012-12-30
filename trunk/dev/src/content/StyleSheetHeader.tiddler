@@ -1,0 +1,14 @@
+<div title="StyleSheetHeader" modifier="escdie" created="201011170853" tags="styleTiddler %tw-elnb">
+<pre>/***
+!StyleSheet for wiki header
+***/
+
+/*{{{*/
+.headerShadow {
+    padding: 1.5em;
+}
+.headerForeground {
+    padding: 1.5em;
+}
+/*}}}*/</pre>
+</div>

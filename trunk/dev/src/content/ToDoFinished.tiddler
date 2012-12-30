@@ -1,0 +1,15 @@
+<div title="ToDoFinished" modifier="escdie" created="201009020813" modified="201101170848" tags="systemTiddler %tw-elnb">
+<pre>!Completed
+<<forEachTiddler
+      where 'store.getValue(tiddler,"category") == "task"  && 
+      tiddler.tags.contains("#done")'
+      sortBy 'tiddler.created' descending
+      write "'* [[' +store.getTiddlerSubject(tiddler)+ '|'+tiddler.title+']]\n'">>
+!Cancelled
+<<forEachTiddler
+      where 'store.getValue(tiddler,"category") == "task"  && 
+      tiddler.tags.contains("#cancelled")'
+      sortBy 'tiddler.created' descending
+      write "'* [[' +store.getTiddlerSubject(tiddler)+ '|'+tiddler.title+']]\n'">>
+<<autoRefresh>></pre>
+</div>

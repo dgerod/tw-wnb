@@ -1,0 +1,9 @@
+<div title="File Drawer" modifier="escdie" created="201008251646" modified="201011110939" tags="systemTiddler %tw-elnb">
+<pre>!!References
+<<forEachTiddler
+      where 'store.getValue(tiddler,"category") == "drawer"'
+      sortBy 'tiddler.title'
+      write "'* [['+tiddler.title+'|'+tiddler.title+']]\n'">>
+
+<<autoRefresh>></pre>
+</div>

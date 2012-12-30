@@ -1,0 +1,43 @@
+<div title="PageTemplate" modifier="escdie" created="201009180828" modified="201011071649" tags="%tw-elnb templateTiddler">
+<pre><!--{{{-->
+<!-- Header -->
+<div class='header' macro='gradient vert [[ColorPalette::PrimaryLight]] [[ColorPalette::PrimaryMid]]'>
+   <div class='headerShadow'>
+      <span class='siteTitle' refresh='content' tiddler='SiteTitle'></span>&nbsp;
+      <span class='siteSubtitle' refresh='content' tiddler='SiteSubtitle'></span>
+   </div>
+   <div class='headerForeground'>
+      <span class='siteTitle' refresh='content' tiddler='SiteTitle'></span>&nbsp;
+      <span class='siteSubtitle' refresh='content' tiddler='SiteSubtitle'></span>
+   </div>
+</div>
+
+<!-- Top Menu -->
+<div id='topMenu'>
+   <table width="100%"><tr>
+   <td align="left"><span refresh='content' tiddler='TopMenu'></span></td>
+   <td align="right"><span macro='fontSize "font-size:"'></span><span macro='search "" buttonAtRight:1'></span></td>
+   </tr></table>
+</div>
+
+<!--- Old top menu NOT USED
+<div id='topMenu' refresh='content' tiddler='TopMenu'></div> 
+--->
+
+<!-- Main Menu -->
+<div id='mainMenu' refresh='content' tiddler='MainMenu'></div>
+
+<div id='sidebar'>
+   <div id='sidebarOptions' refresh='content' tiddler='SideBarOptions'></div>
+   <div id='sidebarTabs' refresh='content' force='true' tiddler='SideBarTabs'></div>
+</div>
+
+<!-- Display -->
+<div id='displayArea'>
+   <div id='messageArea'></div>
+   <div id='tiddlersBar' refresh='none' ondblclick='config.macros.tiddlersBar.onTiddlersBarAction(event)'></div>
+   <div id='tiddlerDisplay'></div>
+</div>
+
+<!--}}}--></pre>
+</div>

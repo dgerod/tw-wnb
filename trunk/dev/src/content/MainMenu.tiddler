@@ -1,0 +1,24 @@
+<div title="MainMenu" modifier="dger" created="201011062137" modified="201212190808" tags="%tw-elnb systemTiddler excludeLists">
+<pre><<elnbTodayJournal2>>
+
+[[Tasks]]
+[[Questions]]
+[[Thoughts]]
+----
+[[Journal]]
+[[Meetings & Co.]]
+[[Procedures]]
+----
+[[Activities]]
+[[Resources]]
+<<LaunchApplicationButton "Storage" "Open storage directory" "data">>
+
+^^[[TiddyWiki|http://tiddlywiki.com]] v<<version>>
+TW-eLB v<<elnbVersion>>
+Copyright [[XYZ Lab|http://xyz-lab.org.es]]
+[[TBD|elnbPackage - ToBeDone]]^^
+
+^^[[CookieData|CookieJar]]
+[[MessageLog]]^^
+</pre>
+</div>

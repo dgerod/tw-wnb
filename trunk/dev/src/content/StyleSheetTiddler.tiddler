@@ -1,0 +1,102 @@
+<div title="StyleSheetTiddler" modifier="escdie" created="201009180851" modified="201104080907" tags="%tw-elnb styleTiddler">
+<pre>/***
+!StyleSheet for tiddlers
+***/
+/*{{{*/
+
+/* Basic tiddler */
+/* -------------------------------------------------------------------------- */
+
+/* Tiddler titles */
+.title {
+      font-size: 300%;
+}
+
+/* Give tiddlers style border and explicit */
+.tiddler {
+      border-top: 1px [[ColorPalette::PrimaryDark]] solid;
+      border-right: 1px [[ColorPalette::PrimaryDark]] solid;
+      border-left: 1px [[ColorPalette::PrimaryDark]] solid;
+      border-bottom: 1px [[ColorPalette::PrimaryDark]] solid;
+      margin-bottom: 1em;
+      padding-bottom: 2em;
+}
+
+/*
+div.tiddler .viewer {
+     color: #FF0000;
+} 
+*/
+
+/*}}}*/
+
+/***
+!StyleSheet for MeetingMinutes tiddlers
+***/
+/*{{{*/
+
+/* MeetingMinutes tiddler */
+/* -------------------------------------------------------------------------- */
+
+/* View Template */
+
+.mmViewFieldName {
+      font-size: 100%;
+      color: [[ColorPalette::SecondaryDark]];
+      border-top: 1px;
+      border-right: 1px;
+      border-left: 1px;
+      border-bottom: 1px;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+}
+
+.mmViewFieldValue {
+      border-top: 1px;
+      border-right: 1px;
+      border-left: 1px;
+      border-bottom: 1px;
+      margin-top: 1em;
+      margin-bottom: 1em;
+}
+
+.mmTitle {
+      font-size: 150%;
+      color: [[ColorPalette::SecondaryDark]];
+      font-weight:bold;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+}
+
+/* Edit Template */
+
+.mmEditFieldName {
+      color:black;
+}
+.mmEditFieldValue input {
+      border-top: 1px [[ColorPalette::SecondaryDark]] solid;
+      border-right: 1px [[ColorPalette::SecondaryDark]] solid;
+      border-left: 1px [[ColorPalette::SecondaryDark]] solid;
+      border-bottom: 1px [[ColorPalette::SecondaryDark]] solid;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+}
+
+/* Category fields of a tiddler*/
+.categoryFieldName {
+      color:red;
+}
+
+.categoryFieldEdit input {
+      border-top: 1px [[ColorPalette::SecondaryDark]] solid;
+      border-right: 1px [[ColorPalette::SecondaryDark]] solid;
+      border-left: 1px [[ColorPalette::SecondaryDark]] solid;
+      border-bottom: 1px [[ColorPalette::SecondaryDark]] solid;
+}
+
+.templateFieldName .categoryFieldName
+.templateFieldEdit .categoryFieldEdit
+
+/*}}}*/
+</pre>
+</div>

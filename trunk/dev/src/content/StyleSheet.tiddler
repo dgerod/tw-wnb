@@ -1,0 +1,16 @@
+<div title="StyleSheet" modifier="escdie" created="201008301643" modified="201011170855" tags="%tw-elnb styleTiddler">
+<pre>/* Style of wiki header */
+[[StyleSheetHeader]] 
+
+/* Style of the top menu */
+[[StyleSheetTopMenu]] 
+
+/* Style of the tiddlers */
+[[StyleSheetTiddler]] 
+
+/* Style of the syntax highlighter */
+[[StyleSheetSyntaxHighlighter]]
+
+/* Text */
+[[StyleSheetTiddlerText]]</pre>
+</div>

@@ -1,0 +1,10 @@
+<div title="SideBarOptions" modifier="escdie" created="201008280725" modified="201101301800" tags="systemTiddler %tw-elnb excludeLists">
+<pre>--
+<<newTiddler label:"new tiddler">><<permaview>>
+<<elnbNewNote>><<elnbNewJournal>><<elnbNewTodo>><<elnbNewQuestion>><<elnbNewMeeting>><<elnbNewReference>><<elnbNewActivity>><<attach>>
+<<saveChanges "save changes">><<saveAndReload "save & reload">><<closeAll>>
+[[recycle bin|RecycleBin]][[unsaved tiddlers|UnsavedTiddlers]]
+<<slider chkSliderOptionsPanel OptionsPanel "options »" "Change TiddlyWiki advanced options">><<slider chkSliderSettingsPanel SettingsPanel "settings »" "Modify settings of the wiki">><<slider chkSliderTiddlerPanel TiddlerPanel "all tiddlers »" "List all tiddlers">>
+
+</pre>
+</div>

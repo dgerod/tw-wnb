@@ -1,0 +1,32 @@
+<div title="MeetingEditTemplate" modifier="escdie" created="201008301644" modified="201011081050" tags="templateTiddler %tw-elnb">
+<pre><!--{{{-->
+<div class='toolbar' macro='toolbar [[ToolbarCommands::EditToolbar]]'></div>
+<div class='editor' macro='edit subject'></div>
+
+<div macro="showWhen tiddler.tags.contains('%showCustomFields')">
+      <div class="categoryFieldName">
+            TID: <span class="categoryFieldEdit" macro="edit title"></span>
+      </div>
+</div>
+
+<div macro='annotations'></div>
+
+<div class="text">Date: <span class="mmEditFieldValue" macro="edit date"></span> </div>
+<div class="text">Time: <span class="mmEditFieldValue" macro="edit time"></span> </div>
+<div class="text">Attendance:  <span class="mmEditFieldValue" macro="edit attendance"></span></div>
+<div class="text">Location:  <span class="mmEditFieldValue" macro="edit location"></span></div>
+
+<div class="mmTitle"> Minutes </div>
+<div class='editor' macro='edit text'></div>
+
+<div class='editor' macro='edit tags'></div><div class='editorFooter'><span macro='message views.editor.tagPrompt'></span><span macro='tagChooser excludeLists'></span></div>
+
+<div macro="showWhen tiddler.tags.contains('%showCustomFields')">
+      <div class="categoryFieldName">
+            Category: <span class="categoryFieldEdit" macro="edit category"></span>
+            Template: <span class="categoryFieldEdit" macro="edit template"></span>
+      </div>
+</div>
+<!--}}}-->
+</pre>
+</div>

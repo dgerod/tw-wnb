@@ -1,0 +1,30 @@
+<div title="elnbPackage - ToBeDone" modifier="escdie" created="201011180955" modified="201104071052" tags="%tw-elnb systemTiddler">
+<pre>!!! To be fixed
+# If I change name "CategoryTemplate Plugin" to "elnbPackage - CategoryTemplate Plugin" the plugin does not work. Do I have to use Pxx before plugin name to fix a activate sequence?
+# Review and refactor "NewCmdPlugin" and others, create well design (prototypes and "window" variable).
+# Fix journal template (journal tiddler + timelog only)
+# Fix result template of YourSearch plugin
+!!! Wishes
+!!!! Completed
+# Add RenameTag plugin
+# New text styles by default 
+# Add 'new activity' macro
+# Improve 'new activity' macro (as AttachFile plugin) 
+# Tiddler subjects in TiddlersBar plugin 
+# Add tiddler full-screen button in command tool
+# LaTeX support (based on MathSVG) 
+# Toolbar command for copy&paste of link info (tiddler subject + TID).
+!!!! TBD
+# Write manual/tutorial 
+# Add state/resource/activity toolbar (like MDT-KB)
+# Specific "drag & drop", copy files in "storage" directory and create link.
+# MindMapTiddler plugin
+# Hack 'reminder' to add reminders to specific tiddler (i.e. appointments).
+# Add [[ResizeEditorPlugin|http://journal.conal.net]], tiddler editor text area “automatically fit the contents”.
+# Tiddler subject in Calendar plugin
+
+!!! Think about 
+# Link calendar to notes, meetings, tasks, etc.
+# 'colleague' macro and 'group' macros which let to list tiddlers from a person or group of person, respectively.
+# Enable/disable pages in Journal.</pre>
+</div>

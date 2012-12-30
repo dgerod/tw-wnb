@@ -1,0 +1,14 @@
+<div title="ScratchPadEditTemplate" modifier="escdie" created="201009240901" modified="201010260730" tags="templateTiddler %tw-elnb">
+<pre><!--{{{-->
+<div class='toolbar' macro='toolbar [[ToolbarCommands::NoDeleteEditToolbar]]'></div>
+<div class='title' macro='view title'></div>
+<div macro='annotations'></div>
+<div class='editor' macro='edit text'></div>
+<div macro="showWhen tiddler.tags.contains('%showCustomFields')">
+      <div class="categoryFieldName">
+            Category: <span class="categoryFieldEdit" macro="edit category"></span>
+            Template: <span class="categoryFieldEdit" macro="edit template"></span>
+      </div>
+</div>
+<!--}}}--></pre>
+</div>

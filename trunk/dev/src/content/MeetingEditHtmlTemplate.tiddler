@@ -1,0 +1,20 @@
+<div title="MeetingEditHtmlTemplate" modifier="escdie" created="201010201836" modified="201010290944" tags="templateTiddler %tw-elnb">
+<pre><!--{{{-->
+<div class='toolbar' macro='toolbar [[ToolbarCommands::EditToolbar]]'></div>
+<div class='editor' macro='edit subject'></div>
+<div class="text">TID:<span class="mmViewFieldValue" macro="view title"></span> </div>
+<div macro='annotations'></div>
+
+<div class="text">Date: <span class="mmEditFieldValue" macro="edit date"></span> </div
+<div class="text">Time: <span class="mmEditFieldValue" macro="edit time"></span> </div>
+<div class="text">Attendance:  <span class="mmEditFieldValue" macro="edit attendance"></span></div>
+<div class="text">Location:  <span class="mmEditFieldValue" macro="edit location"></span></div>
+
+<div class="title"> Minutes </div>
+<div class='editor' macro='editHtml text'></div>
+
+<div class='editor' macro='edit tags'></div><div class='editorFooter'><span macro='message views.editor.tagPrompt'></span><span macro='tagChooser excludeLists'></span></div>
+
+<!--}}}-->
+</pre>
+</div>

@@ -1,0 +1,6 @@
+<div title="RecycleBin" modifier="dger" created="201008141706" modified="201009240921" tags="systemTiddler %tw-elnb">
+<pre><<list filter [tag[Trash]]>>
+<<emptyTrash>>
+
+<<autoRefresh>></pre>
+</div>

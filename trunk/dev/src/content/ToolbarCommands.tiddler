@@ -1,0 +1,6 @@
+<div title="ToolbarCommands" modifier="escdie" created="201007081008" modified="201101301807" tags="%tw-elnb">
+<pre>|~ViewToolbar|closeTiddler closeOthers fullscreen editTiddler elnbCopyLink references > fields syncing permalink snapshotSaveHere jump|
+|~WysiwygViewToolbar|closeTiddler closeOthers fullscreen editTiddler editHtml elnbCopyLink references > fields syncing permalink snapshotSaveHere jump|
+|~EditToolbar|+saveTiddler -cancelTiddler deleteTiddler|
+|~NoDeleteEditToolbar|+saveTiddler -cancelTiddler|</pre>
+</div>

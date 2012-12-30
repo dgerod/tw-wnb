@@ -1,0 +1,25 @@
+<div title="EditTemplate" modifier="escdie" created="201008301645" modified="201010260738" tags="templateTiddler %tw-elnb">
+<pre><!--{{{-->
+<div class='toolbar' macro='toolbar [[ToolbarCommands::EditToolbar]]'></div>
+<div class='title' macro='view title'></div>
+<div class='editor' macro='edit title'></div>
+<div macro='annotations'></div>
+
+<div macro="showWhen tiddler.tags.contains('%showCustomFields')">
+      <div class="categoryFieldName">
+            Subject: <span class="categoryFieldEdit" macro="edit subject"></span>
+      </div>
+</div>
+
+<div class='editor' macro='edit text'></div>
+<div class='editor' macro='edit tags'></div><div class='editorFooter'><span macro='message views.editor.tagPrompt'></span>
+<span macro='tagChooser excludeLists'></span></div>
+
+<div macro="showWhen tiddler.tags.contains('%showCustomFields')">
+      <div class="categoryFieldName">
+            Category: <span class="categoryFieldEdit" macro="edit category"></span>
+            Template: <span class="categoryFieldEdit" macro="edit template"></span>
+      </div>
+</div>
+<!--}}}--></pre>
+</div>

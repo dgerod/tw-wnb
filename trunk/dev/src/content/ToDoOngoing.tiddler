@@ -1,0 +1,7 @@
+<div title="ToDoOngoing" modifier="dger" created="201009101334" modified="201009240904" tags="systemTiddler %tw-elnb">
+<pre><<forEachTiddler
+      where 'store.getValue(tiddler,"category") == "task"  && 
+      tiddler.tags.contains("#ongoing")' 
+      sortBy 'tiddler.title'
+      write "'* [['+tiddler.title+'|'+tiddler.title+']]\n'">></pre>
+</div>
