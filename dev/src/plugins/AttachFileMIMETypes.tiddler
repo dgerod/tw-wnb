@@ -1,0 +1,112 @@
+<div title="AttachFileMIMETypes" modifier="escdie" created="201010171544" modified="201104280916" tags="AttachFilePackage pluginConfig %tw-elnb">
+<pre>text/plain
+.txt .text .js .vbs .asp .cgi .pl
+----
+text/html
+.htm .html .hta .htx .mht
+----
+text/comma-separated-values
+.csv
+----
+text/javascript
+.js
+----
+text/css
+.css
+----
+text/xml
+.xml .xsl .xslt
+----
+image/gif
+.gif
+----
+image/jpeg
+.jpg .jpe .jpeg
+----
+image/png
+.png
+----
+image/bmp
+.bmp
+----
+image/tiff
+.tif .tiff
+----
+audio/basic
+.au .snd
+----
+audio/wav
+.wav
+----
+audio/x-pn-realaudio
+.ra .rm .ram
+----
+audio/x-midi
+.mid .midi
+----
+audio/mp3
+.mp3
+----
+audio/m3u
+.m3u
+----
+video/x-ms-asf
+.asf
+----
+video/avi
+.avi
+----
+video/mpeg
+.mpg .mpeg
+----
+video/quicktime
+.qt .mov .qtvr
+----
+application/pdf
+.pdf
+----
+application/rtf
+.rtf
+----
+application/postscript
+.ai .eps .ps
+----
+application/wordperfect
+.wpd
+----
+application/mswrite
+.wri
+----
+application/msexcel
+.xls .xls3 .xls4 .xls5 .xlw
+----
+application/msword
+.doc
+----
+application/mspowerpoint
+.ppt .pps
+----
+application/x-director
+.swa
+----
+application/x-shockwave-flash
+.swf
+----
+application/x-zip-compressed
+.zip
+----
+application/x-gzip
+.gz
+----
+application/x-rar-compressed
+.rar
+----
+application/octet-stream
+.com .exe .dll .ocx
+----
+application/java-archive
+.jar
+----
+application/notes
+.ndl</pre>
+</div>

@@ -1,0 +1,9 @@
+<div title="ToDoUnknown" modifier="dger" created="201009020754" modified="201009240904" tags="systemTiddler %tw-elnb">
+<pre><<forEachTiddler
+      where 'store.getValue(tiddler,"category") == "task"  && 
+      ( ! tiddler.tags.contains("now") &&
+        ! !tiddler.tags.contains("future") )'
+      sortBy 'tiddler.title'
+      write "'* [['+tiddler.title+'|'+tiddler.title+']]\n'">>
+</pre>
+</div>

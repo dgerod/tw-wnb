@@ -1,0 +1,20 @@
+<div title="Documents" modifier="escdie" created="201008251645" modified="201011110946" tags="systemTiddler %tw-elnb">
+<pre>!!All documents
+<<forEachTiddler
+      where 'tiddler.tags.contains("@document")' 
+      sortBy 'tiddler.title'
+      write " '* [[' + store.getTiddlerSubject(tiddler) + '|' + tiddler.title + ']]\n' ">>
+!!Notes
+<<forEachTiddler
+      where 'tiddler.tags.contains("@document") &&
+      tiddler.tags.contains("@note")'
+      sortBy 'tiddler.title'
+      write " '* [[' + store.getTiddlerSubject(tiddler) + '|' + tiddler.title + ']]\n' ">>
+!!Reports
+<<forEachTiddler
+      where 'tiddler.tags.contains("@document") &&
+      tiddler.tags.contains("@report")'
+      sortBy 'tiddler.title'
+      write " '* [[' + store.getTiddlerSubject(tiddler) + '|' + tiddler.title + ']]\n' ">>
+<<autoRefresh>></pre>
+</div>

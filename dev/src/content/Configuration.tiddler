@@ -1,0 +1,17 @@
+<div title="Configuration" modifier="escdie" created="201008280728" modified="201011101919" tags="systemTiddler %tw-elnb">
+<pre>!!! Layout
+[[PageTemplate]]
+|>|>|[[SiteTitle]] - [[SiteSubtitle]]|
+| [[MainMenu]] | [[DefaultTiddlers]]<br><br>[[ViewTemplate]]<br><br>[[EditTemplate]] |[[SideBarOptions]] |
+|~|~|[[OptionsPanel]] |
+|~|~|[[AdvancedOptions]] |
+|~|~|<<tiddler Configuration.SideBarTabs>> |
+*Basic StyleSheet: [[StyleSheetColors]] - [[StyleSheetLayout]] - [[StyleSheetPrint]]
+*[[SiteUrl]]
+!!!Styles
+<<list filter "[tag[styleTiddler]]>>
+!!!Templates
+<<list filter "[tag[templateTiddler]]>>
+!!!Plugins
+<<list filter "[tag[pluginConfig]]">></pre>
+</div>

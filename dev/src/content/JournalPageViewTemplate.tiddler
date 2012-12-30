@@ -1,0 +1,26 @@
+<div title="JournalPageViewTemplate" modifier="dger" created="201009301810" modified="201010031546" tags="%tw-elnb templateTiddler">
+<pre><!--{{{-->
+<div class='toolbar' macro='toolbar [[ToolbarCommands::WysiwygViewToolbar]]'></div>
+<div class='title' macro='view title'></div>
+<div class='subtitle'><span macro='view modifier link'></span>, <span macro='view modified date'></span> (<span macro='message views.wikified.createdPrompt'></span> <span macro='view created date'></span>)</div>
+
+<div class='toolbar'>
+<span macro="showWhen tiddler.tags.contains('systemConfig')">
+   <span macro="toggleTag systemConfigDisable . 'Disable'"></span>
+</span>
+<span macro="showWhen (! tiddler.tags.contains('systemConfig')  && 
+                       ! tiddler.tags.contains('systemTiddler') && 
+                       ! tiddler.tags.contains('styleTiddler')  && 
+                       ! tiddler.tags.contains('templateTiddler') )">
+   <span macro="toggleTag #starred . 'Starred'"></span>
+</span>
+</div>
+
+<div class='tagging' macro='tagging'></div>
+<div class='tagged' macro='view category'></div>
+<div class='tagged' macro='tags'></div>
+
+<div class='viewer' macro='view text wikified'></div>
+<div class='tagClear'></div>
+<!--}}}--></pre>
+</div>

@@ -1,0 +1,20 @@
+<div title="MeetingViewTemplate" modifier="escdie" created="201008301644" modified="201010290944" tags="templateTiddler %tw-elnb">
+<pre><!--{{{-->
+<div class='toolbar' macro='toolbar [[ToolbarCommands::WysiwygViewToolbar]]'></div>
+<div class='title' macro='view subject'></div>
+<div class='subtitle'><span macro='view modifier link'></span>, <span macro='view modified date'></span> (<span macro='message views.wikified.createdPrompt'></span> <span macro='view created date'></span>) - TID: <span class="view" macro="view title"></span></div>
+<div class='toolbar'>
+   <span macro="toggleTag #starred . 'Starred'"></span>
+</div>
+<div class='tagging' macro='tagging'></div>
+<div class='tagged' macro='view category'></div>
+<div class='tagged' macro='tags'></div>
+<div class="mmViewFieldName">Date: <span class="mmViewFieldValue" macro="view date"></span></div>
+<div class="mmViewFieldName">Time: <span class="mmViewFieldValue" macro="view time"></span></div>
+<div class="mmViewFieldName">Attendance: <span class="mmViewFieldValue" macro="view attendance"></span></div>
+<div class="mmViewFieldName">Location: <span class="mmViewFieldValue" macro="view location"></span></div>
+<div class="mmTitle">Minutes</div>
+<div class='viewer' macro='view text wikified'></div>
+<div class='tagClear'></div>
+<!--}}}--></pre>
+</div>

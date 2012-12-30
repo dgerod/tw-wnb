@@ -1,0 +1,41 @@
+<div title="Tasks" modifier="carfer" created="201009091807" modified="201105010530" tags="systemTiddler %tw-elnb">
+<pre>!Ongoing
+<<forEachTiddler
+      where 'store.getValue(tiddler,"category") == "task"  && 
+      tiddler.tags.contains("#ongoing")'
+      sortBy 'tiddler.created' descending
+      write "'* [[' +store.getTiddlerSubject(tiddler)+ '|'+tiddler.title+']]\n'">>
+!To be done
+!!!Now
+<<forEachTiddler
+      where 'store.getValue(tiddler,"category") == "task"  && 
+      tiddler.tags.contains("#now")' 
+      sortBy 'tiddler.created' descending
+      write "'* [[' +store.getTiddlerSubject(tiddler)+ '|'+tiddler.title+']]\n'">>
+!!!Next
+<<forEachTiddler
+      where 'store.getValue(tiddler,"category") == "task"  && 
+      tiddler.tags.contains("#next")' 
+      sortBy 'tiddler.created' descending
+      write "'* [[' +store.getTiddlerSubject(tiddler)+ '|'+tiddler.title+']]\n'">>
+!!!Future/Maybe
+<<forEachTiddler
+      where 'store.getValue(tiddler,"category") == "task"  && 
+      tiddler.tags.contains("#future")' 
+      sortBy 'tiddler.created' descending
+      write "'* [[' +store.getTiddlerSubject(tiddler)+ '|'+tiddler.title+']]\n'">>
+!Not classified
+<<forEachTiddler
+      where 'store.getValue(tiddler,"category") == "task"  && 
+      ! ( tiddler.tags.contains("#now") ||
+          tiddler.tags.contains("#next") ||
+          tiddler.tags.contains("#future") ||
+          tiddler.tags.contains("#future") ||
+          tiddler.tags.contains("#cancelled")  ||
+          tiddler.tags.contains("#done") )'
+      sortBy 'tiddler.created' descending
+      write "'* [[' +store.getTiddlerSubject(tiddler)+ '|'+tiddler.title+']]\n'">>
+!Finished
+To see all completed tasks go to [[here|ToDoFinished]]
+<<autoRefresh>></pre>
+</div>

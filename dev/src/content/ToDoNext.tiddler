@@ -1,0 +1,7 @@
+<div title="ToDoNext" modifier="escdie" created="201009101337" modified="201011110943" tags="systemTiddler %tw-elnb">
+<pre><<forEachTiddler
+      where 'store.getValue(tiddler,"category") == "task"  && 
+      tiddler.tags.contains("#next")' 
+      sortBy 'tiddler.title'
+      write "'* [[' +store.getTiddlerSubject(tiddler)+ '|'+tiddler.title+']]\n'">></pre>
+</div>

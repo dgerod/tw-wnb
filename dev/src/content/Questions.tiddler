@@ -1,0 +1,13 @@
+<div title="Questions" modifier="escdie" created="201008251616" modified="201101241820" tags="systemTiddler %tw-elnb">
+<pre>!!!All questions
+<<forEachTiddler
+      where 'store.getValue(tiddler,"category") == "question"'
+      sortBy 'tiddler.created' descending
+      write " '* [[' + store.getTiddlerSubject(tiddler) + '|' + tiddler.title + ']]\n' ">>
+!!!Open
+<<forEachTiddler
+      where 'store.getValue(tiddler,"category") == "question" && tiddler.tags.contains("#open") ' 
+      sortBy 'tiddler.created' descending
+      write " '* [[' + store.getTiddlerSubject(tiddler) + '|' + tiddler.title + ']]\n' ">>
+<<autoRefresh>></pre>
+</div>

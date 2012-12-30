@@ -1,0 +1,7 @@
+<div title="ToDoWaitingFor" modifier="escdie" created="201103201030" modified="201103280754" tags="systemTiddler %tw-elnb" creator="escdie">
+<pre><<forEachTiddler
+      where 'store.getValue(tiddler,"category") == "task"  && 
+      tiddler.tags.contains("#waitingFor")' 
+      sortBy 'tiddler.created' descending
+      write "'* [[' +store.getTiddlerSubject(tiddler)+ '|'+tiddler.title+']]\n'">></pre>
+</div>

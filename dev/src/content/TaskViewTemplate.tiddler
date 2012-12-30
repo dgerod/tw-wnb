@@ -1,0 +1,22 @@
+<div title="TaskViewTemplate" modifier="escdie" created="201102050932" modified="201103280755" tags="%tw-elnb templateTiddler">
+<pre><!--{{{-->
+<div class='toolbar' macro='toolbar [[ToolbarCommands::ViewToolbar]]'></div>
+<div class='title' macro='view subject'></div>
+<div class='subtitle'><span macro='view modifier link'></span>, <span macro='view modified date'></span> (<span macro='message views.wikified.createdPrompt'></span> <span macro='view created date'></span>) - TID: <span class='view' macro='view title'></span></div>
+
+<div class='tagging' macro='tagging'></div>
+<div class='tagged' macro='view category'></div>
+<div class='tagged' macro='tags'></div>
+
+<span macro='toggleTag #ongoing'></span>
+<span macro='toggleTag #now'></span>
+<span macro='toggleTag #next'></span>
+<span macro='toggleTag #waitingFor'></span>
+<span macro='toggleTag #future'></span>
+<span macro='toggleTag #done'></span>
+<span macro='toggleTag #cancelled'></span>
+
+<div class='viewer' macro='view text wikified'></div>
+<div class='tagClear'></div>
+<!--}}}--></pre>
+</div>

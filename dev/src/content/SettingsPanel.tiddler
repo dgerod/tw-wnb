@@ -1,0 +1,8 @@
+<div title="SettingsPanel" modifier="escdie" created="201011051729" modified="201011170849" tags="%tw-elnb systemTiddler">
+<pre>[[Configuration]]
+[[Plugins|PluginManager]]
+[[elnbConfig|zz_elnbPackageConfig]]
+[[UserConfig|zzz_UserConfig]]
+[[TiddlerTextStyles|StyleSheetTiddlerText]]
+</pre>
+</div>

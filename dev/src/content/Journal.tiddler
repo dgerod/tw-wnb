@@ -1,0 +1,10 @@
+<div title="Journal" modifier="escdie" created="201008251618" modified="201011110946" tags="systemTiddler %tw-elnb">
+<pre><<forEachTiddler
+      where 'store.getValue(tiddler,"category") == "journal" && 
+                 !( tiddler.tags.contains("@timeLog") || tiddler.tags.contains("@diary") || tiddler.tags.contains("@pomodoro") ) ' 
+      sortBy 'tiddler.created' descending
+      write " '* [[' + store.getTiddlerSubject(tiddler) + '|' + tiddler.title + ']]\n' ">>
+<<autoRefresh>>
+
+</pre>
+</div>

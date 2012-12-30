@@ -1,0 +1,85 @@
+<div title="DatePluginInfo" modifier="dger" created="201007171405" modified="201009271801" tags="pluginInfo plugin %tw-elnb DateExtension">
+<pre>|Name|DatePluginInfo|
+|Source|http://www.TiddlyTools.com/#DatePlugin|
+|Documentation|http://www.TiddlyTools.com/#DatePluginInfo|
+|Version|2.7.1|
+|Author|Eric Shulman|
+|License|http://www.TiddlyTools.com/#LegalStatements|
+|~CoreVersion|2.1|
+|Type|documentation|
+|Description|documentation for DatePlugin|
+This plugin provides a general approach to displaying formatted dates and/or links and popups that permit easy navigation and management of tiddlers based on their creation/modification dates.
+!!!!!Usage
+<<<
+This plugin displays formatted dates, for the specified year, month, day using number values or mathematical expressions such as (Y+1) or (D+30).  Optionally, you can create a link to a 'dated tiddler' for quick blogging or create a popup menu that includes the dated tiddler link plus links to tiddlers that were created/changed on that date, or are tagged with that date and, if the RemindersPlugin is installed, any pending reminders for the coming 31 days.  There is also a public API, so other plugins can embed a variety of formatted date output, links, and/or popup menus.
+{{{
+<<date mode date format linkformat>>
+}}}
+//all parameters are optional//
+*''mode''<br>is one of:
+**''display'' (default)<br>shows a formatted date
+**''link''<br>creates a link to a specific 'date titled' tiddler
+**''popup''<br>creates a popup command containing a dated tiddler link, plus links to changes and reminders.
+*''date''<br>lets you enter ANY date (not just today) as ''year, month, and day values or simple mathematical expressions'' using pre-defined variables, Y, M, and D for the current year, month and day, repectively.  You can display the modification date of the current tiddler by using the keyword: ''tiddler'' in place of the year, month and day parameters.  Use ''tiddler://name-of-tiddler//'' to display the modification date of a specific tiddler.  You can also use keywords ''today'' or ''filedate'' to refer to these //dynamically changing// date/time values.  
+*{{block{
+''format'' and ''linkformat''
+uses standard ~TiddlyWiki date formatting syntax.  The default is "YYYY.0MM.0DD"
+>''DDD'' - day of week in full (eg, "Monday"), ''DD'' - day of month, ''0DD'' - adds leading zero
+>''MMM'' - month in full (eg, "July"), ''MM'' - month number, ''0MM'' - adds leading zero
+>''YYYY'' - full year, ''YY'' - two digit year, ''hh'' - hours, ''mm'' - minutes, ''ss'' - seconds
+>//note: use of hh, mm or ss format codes is only supported with ''tiddler'', ''today'' or ''filedate'' values//
+}}}
+*''linkformat''<br>specify an alternative date format so that the title of a 'dated tiddler' link can have a format that differs from the date's displayed format
+In addition to the macro syntax, DatePlugin also provides a public javascript API so that other plugins that work with dates (such as calendar generators, etc.) can quickly incorporate date formatted links or popups into their output:
+{{{
+showDate(place, date, mode, format, linkformat, autostyle, weekend);
+}}} 
+Note that the javascript API supports two //optional// true/false parameters, in addition those provided by the macro interface:
+*''autostyle''<br>font/background styles of formatted dates are automatically adjusted to show the date's status:  'today' is boxed, 'changes' are bold, 'reminders' are underlined, weekends, holidays, changes, and reminders each have a different background color to make them more visibly distinct from one another.
+*''weekend''<br>true=day is a weekend, false=day is a weekday, default=automatically determine if a given date falls on a weekend.
+<<<
+!!!!!Examples
+<<<
+The current date: <<date>>
+The current time: <<date today "0hh:0mm:0ss">>
+Today's blog: <<date link today "DDD, MMM DDth, YYYY">>
+Recent blogs/changes/reminders: <<date popup Y M D-1 "yesterday">> <<date popup today "today">> <<date popup Y M D+1 "tomorrow">>
+The first day of next month will be a <<date Y M+1 1 "DDD">>
+This tiddler (DatePlugin) was last updated on: <<date tiddler "DDD, MMM DDth, YYYY">>
+The SiteUrl was last updated on: <<date tiddler:SiteUrl "DDD, MMM DDth, YYYY">>
+This document was last saved on <<date filedate "DDD, MMM DDth, YYYY at 0hh:0mm:0ss">>
+<<date 2006 07 24 "MMM DDth, YYYY">> will be a <<date 2006 07 24 "DDD">>
+<<<
+!!!!!Revisions
+<<<
+2009.05.31 2.7.1 in addRemindersToPopup(), 'new reminder....' command now uses {{{<<newTiddler>>}}} macro.  Also, general code reduction/cleanup.
+2008.03.08 2.7.0 in addModifiedsToPopup(), if a tiddler was created on the specified date, don't list it in the 'changed' section of the popup.  Based on a request from Kashgarinn
+2008.01.31 2.6.0 refactored date style logic into separate setDateStyle() function so it can be overridden by a custom definition.  See [[DatePluginConfig]].
+2008.01.11 2.5.0 added options to selectively suppress created/changes/tagged/reminders popup content 
+2008.01.08 [*.*.*] plugin size reduction: documentation moved to DatePluginInfo
+2007.11.21 2.4.0 added hasTagged() and addTaggedToPopup() to list any tiddlers that has been tagged using the title of the dated journal tiddler asa tag value (i.e., the tiddlers that will be listed in the standard "tagging" display when viewing the journal tiddler itself).  Based on a request from Coby.
+2007.06.20 2.3.1 in onClickDatePopup(), use Popup.show() instead of deprecated ScrollToTiddlerPopup().  Fixes fatal error that prevents popups from being properly displayed
+2007.05.31 2.3.0 list "created" tiddlers in date popup.  Also, force re-cache of created/modified indices when displaying current date and store.isDirty(), so that popup is kept in sync with tiddler changes.
+2006.05.09 2.2.1 added "todaybg" handling to set background color of current date.  Also, honor excludeLists tag when getting lists of tiddlers.  Based on suggestions by Mark Hulme.
+2006.05.05 2.2.0 added "linkedbg" handling to set background color when a 'dated tiddler' exists.  Based on a suggestion by Mark Hulme.
+2006.03.08 2.1.2 add 'override leadtime' flag param in call to findTiddlersWithReminders(), and add "Enter a title" default text to new reminder handler.  Thanks to Jeremy Sheeley for these additional tweaks.
+2006.03.06 2.1.0 hasReminders() nows uses window.reminderCacheForCalendar[] when present.  If calendar cache is not present, indexReminders() now uses findTiddlersWithReminders() with a 90-day look ahead to check for reminders.  Also, switched default background colors for autostyled dates: reminders are now greenish ("c0ffee") and holidays are now reddish ("ffaace").
+2006.02.14 2.0.5 when readOnly is set (by TW core), omit "new reminders..." popup menu item and, if a "dated tiddler" does not already exist, display the date as simple text instead of a link.
+2006.02.05 2.0.4 added var to variables that were unintentionally global.  Avoids FireFox 1.5.0.1 crash bug when referencing global variables
+2006.01.18 2.0.3 In 1.2.x the tiddler editor's text area control was given an element ID=("tiddlerBody"+title), so that it was easy to locate this field and programmatically modify its content.  With the addition of configuration templates in 2.x, the textarea no longer has an ID assigned.  To find this control we now look through all the child nodes of the tiddler editor to locate a "textarea" control where attribute("edit") equals "text", and then append the new reminder to the contents of that control.
+2006.01.11 2.0.2 correct 'weekend' override detection logic in showDate()
+2006.01.10 2.0.1 allow custom-defined weekend days (default defined in config.macros.date.weekend[] array)
+added flag param to showDate() API to override internal weekend[] array
+2005.12.27 2.0.0 Update for TW2.0
+Added parameter handling for 'linkformat'
+2005.12.21 1.2.2 FF's date.getYear() function returns 105 (for the current year, 2005).  When calculating a date value from Y M and D expressions, the plugin adds 1900 to the returned year value get the current year number.  But IE's date.getYear() already returns 2005.  As a result, plugin calculated date values on IE were incorrect (e.g., 3905 instead of 2005).  Adding +1900 is now conditional so the values will be correct on both browsers.
+2005.11.07 1.2.1 added support for "tiddler" dynamic date parameter
+2005.11.06 1.2.0 added support for "tiddler:title" dynamic date parameter
+2005.11.03 1.1.2 when a reminder doesn't have a specified title parameter, use the title of the tiddler that contains the reminder as "fallback" text in the popup menu.  Based on a suggestion from BenjaminKudria.
+2005.11.03 1.1.1 Temporarily bypass hasReminders() logic to avoid excessive overhead from generating the indexReminders() cache.  While reminders can still appear in the popup menu, they just won't be indicated by auto-styling the date number that is displayed.  This single change saves approx. 60% overhead (5 second delay reduced to under 2 seconds).
+2005.11.01 1.1.0 corrected logic in hasModifieds() and hasReminders() so caching of indexed modifieds and reminders is done just once, as intended.  This should hopefully speed up calendar generators and other plugins that render multiple dates...
+2005.10.31 1.0.1 documentation and code cleanup
+2005.10.31 1.0.0 initial public release
+2005.10.30 0.9.0 pre-release
+<<<</pre>
+</div>

@@ -1,0 +1,4 @@
+<div title="Starred" modifier="escdie" created="201009181619" modified="201011080758" tags="systemTiddler %tw-elnb">
+<pre><<list filter [tag[#starred]]>>
+<<autoRefresh>></pre>
+</div>

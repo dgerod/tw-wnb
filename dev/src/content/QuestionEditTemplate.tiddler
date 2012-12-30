@@ -1,0 +1,22 @@
+<div title="QuestionEditTemplate" modifier="escdie" created="201010251913" modified="201103221301" tags="%tw-elnb templateTiddler">
+<pre><!--{{{-->
+<div class='toolbar' macro='toolbar [[ToolbarCommands::EditToolbar]]'><span style="padding-right:0.15em;" macro='monkeyTagger label:"Status" source:%QuestionStatusDB'></div>
+<div class='title' macro='view subject'></div>
+<div class='editor' macro='edit subject'></div>
+<div macro="showWhen tiddler.tags.contains('%showCustomFields')">
+      <div class="categoryFieldName">
+            TID: <span class="categoryFieldEdit" macro="edit title"></span>
+      </div>
+</div>
+<div macro='annotations'></div>
+<div class='editor' macro='edit text'></div>
+<div class='editor' macro='edit tags'></div><div class='editorFooter'><span macro='message views.editor.tagPrompt'></span>
+<span macro='tagChooser excludeLists'></span></div>
+<div macro="showWhen tiddler.tags.contains('%showCustomFields')">
+      <div class="categoryFieldName">
+            Category: <span class="categoryFieldEdit" macro="edit category"></span>
+            Template: <span class="categoryFieldEdit" macro="edit template"></span>
+      </div>
+</div>
+<!--}}}--></pre>
+</div>

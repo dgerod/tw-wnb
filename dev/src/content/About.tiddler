@@ -1,0 +1,20 @@
+<div title="About" modifier="escdie" created="201009141800" modified="201107040651" tags="systemTiddler %tw-elnb %help">
+<pre>!TiddlyWik eLB
+TW-eLB is a tuning version of [[TiddlyWiki|http://tiddlywiki.com]], a list of TW extensions used and/or modified are listed below. 
+The current version of TW-eLNB is ''v<<elnbVersion>>'' an it is based on version ''v<<version>>'' of TW.
+
+| Layout | Styles | Templates | Extensions |
+|<<list filter "[tag[%tw-elnb AND systemTiddler]]">>|<<list filter "[tag[%tw-elnb AND styleTiddler]]">>|<<list filter "[tag[%tw-elnb AND templateTiddler]]">>|<<list filter "[tag[%tw-elnb AND plugin]]">>|
+
+Open issues and wishes can be found [[here|elnbPackage - ToBeDone]].
+
+!!!License
+Copyright [[XYZ Lab.|http://xyz-lab.org.es]] 2010
+
+''Open Source Licence''
+This page (and the TiddlyWiki it is building on) is published under a [[BSD open source license|http://www.linfo.org/bsdlicense.html]]. This gives you the freedom to use it pretty much however you want, including for commercial purposes, as long as you keep the copyright notice.
+
+!!!Version
+* 1.0  (Oct' 2010) - Initial beta version
+</pre>
+</div>

@@ -1,0 +1,14 @@
+<div title="YourSearchItemTemplate" modifier="escdie" created="201011071517" modified="201011082002" tags="templateTiddler %tw-elnb %elnb-hack elnbPackage">
+<pre><!--{{{-->
+<span class='yourSearchNumber' macro='foundTiddler number'></span>
+<!--
+<div macro="showWhen store.existTiddlerSubject( <<foundTiddler title>> ) == true">
+KKKKKKKKKKKKKKKKKKKKKKKKK
+</div>
+-->
+<span class='yourSearchTitle' macro='foundTiddler title'></span>&nbsp;-&nbsp;
+<span class='yourSearchTitle' macro='foundTiddler field "subject"'></span>&nbsp;-&nbsp;
+<span class='yourSearchTags' macro='foundTiddler field tags 50'></span>
+<span macro="yourSearch if previewText"><div class='yourSearchText' macro='foundTiddler field text 250'></div></span>
+<!--}}}--></pre>
+</div>

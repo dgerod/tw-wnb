@@ -1,0 +1,13 @@
+<div title="Thoughts" modifier="escdie" created="201008251618" modified="201102211616" tags="systemTiddler %tw-elnb">
+<pre>! TBD
+<<forEachTiddler
+      where 'tiddler.tags.contains("@thoughts") & !tiddler.tags.contains("#done")  & !tiddler.tags.contains("#cancelled")'  
+      sortBy 'tiddler.title'
+      write " '* [[' + store.getTiddlerSubject(tiddler) + '|' + tiddler.title + ']]\n' ">>
+! Done/Cancelled
+<<forEachTiddler
+      where 'tiddler.tags.contains("@thoughts") & ( tiddler.tags.contains("#done") | tiddler.tags.contains("#cancelled") )' 
+      sortBy 'tiddler.title'
+      write " '* [[' + store.getTiddlerSubject(tiddler) + '|' + tiddler.title + ']]\n' ">>
+<<autoRefresh>></pre>
+</div>

@@ -1,0 +1,53 @@
+<div title="ShowPopup" modifier="escdie" created="201009181207" modified="201010261020" tags="%tw-elnb %extension transclusion macro plugin %elnb-hack">
+<pre>/%
+!info
+|Name|ShowPopup|
+|Source|http://www.TiddlyTools.com/#ShowPopup|
+|Version|1.2.0|
+|Author|Eric Shulman|
+|License|http://www.TiddlyTools.com/#LegalStatements|
+|~CoreVersion|2.1|
+|Type|transclusion|
+|Description|display tiddler content in a TiddlyWiki popup panel|
+Usage:
+<<<
+{{{
+<<tiddler ShowPopup with: TiddlerName label tooltip buttonClass width popupClass>>
+}}}
+where:
+*''~TiddlerName''<br>title of the tiddler to be displayed
+*''label''<br>text for the command link
+*''tooltip''<br>mouseover help text for the link
+*''buttonClass''<br>CSS classname applied to the command text (default=button)
+*''width''<br>width of the popup (using CSS measurements, default=auto)
+*''popupClass''<br>CSS classname applied to the popup panel (default=none).<br>Use 'sticky' for persistent popups (see StickyPopupPlugin)
+<<<
+Example:
+<<<
+{{{
+<<tiddler ShowPopup with: ShowPopup [[Try this]] [[show this tiddler in a popup]]>>
+}}}
+<<tiddler ShowPopup with: ShowPopup [[Try this]] [[show this tiddler in a popup]]>>
+<<<
+!end
+
+!show
+<html><hide linebreaks>
+<a href="javascript:;" class="$4" title="$3" onclick="
+	var p=Popup.create(this); if(!p)return;
+	p.className+='$6'!='$'+'6'?' $6':'';
+	var d=createTiddlyElement(p,'div');
+	var s=d.style;
+	s.whiteSpace='normal';
+	s.width='$5'!='$'+'5'?'$5':'auto';
+	s.padding='2px';
+	wikify(store.getTiddlerText('$1',''),d);
+	Popup.show();
+	event.cancelBubble=true;
+	if(event.stopPropagation)event.stopPropagation();
+	return(false);
+">$2</a></html>
+!end
+
+%/<<tiddler {{'ShowPopup##'+('$1'=='$'+'1'?'info':'show')}} with: [[$1]] [[$2]] [[$3]] [[$4]] [[$5]] [[$6]]>></pre>
+</div>

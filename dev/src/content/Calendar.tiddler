@@ -1,0 +1,9 @@
+<div title="Calendar" modifier="escdie" created="201009181059" modified="201202021014" tags="systemTiddler %tw-elnb">
+<pre><<calendar thismonth>>
+<<newReminder>>
+<<autoRefresh>>
+!!Upcoming events
+<<showReminders leadtime:30 format:"DATE -- TITLE -- TIDDLER">>
+!!All events
+</pre>
+</div>
