@@ -1,4 +1,4 @@
-#Work notes using TiddlyWiki framework
+# Work notes using TiddlyWiki framework
 
 TiddlyWiki is a reusable non-linear personal web notebook . It's a single HTML file which contains CSS, JavaScript, and the content. The content is divided into a series of sections, or Tiddlers. TiddlyWiki has been used by different people as a software framework to build specialisations including task management tool, web clipping tools, a collaborative note taking tool, etc.
 
